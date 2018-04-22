@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/book.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div>
+            <h1>Cinema ticket booker</h1>
+        </div>
+        <div>
+            <h1>Добре дошли!</h1>
+        </div>
+    </header>
+    <main class="main" id="book-main">
+        <div id="booking-area">
+            <section>
+                <h2>Изберете прожекция</h2>
+                <select id="projection-select"></select>
+            </section>
+            <section id="poster-section">
+                <h2>Постер на Филм</h2>
+                <img src="" alt="poster" id="poster">
+            </section>
+            <section>
+                <h2>Избрани места</h2>
+                <span id="booking-seats"></span>
+                <button id="booking-btn">Запази</button>
+            </section>
+        </div>
+        <div id="hole">
+            <h2>Изберете места</h2>
+            <div id="screen"></div>
+            <div id="seats"></div>
+        </div>
+    </main>
+    <footer id="footer">
+        <img src="images/shopping-cart.png" id="shopping-cart-button">
+        <h3>Най-якото кино евер. Всички права са запазени.</h3>
+        <img src="images/logout.png" id="logout-button">
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Concert Tickets</string>
+    <string name="txtTitle">Ticket Vault</string>
+    <string name="txtTickets">Number of Tickets</string>
+    <string name="prompt">Select Group</string>
+    <string name="description">Concert Image</string>
+    <string name="btnCost">Find the Cost</string>
+</resources>

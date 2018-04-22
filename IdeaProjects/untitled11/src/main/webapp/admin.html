@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/cashier.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div>
+            <h1>Cinema ticket booker</h1>
+        </div>
+        <div>
+            <h1>Добре дошли!</h1>
+        </div>
+    </header>
+    <main class="main" id="book-main">
+        <section id="payment-section">
+            <div class="search-divs">
+                <select id="projection-select"></select>
+            </div>
+            <div class="search-divs">
+                <input id="user-email"/>
+                <button id="search-user">Търси потребител</button>
+            </div>
+            <ul id="booking-list">
+            </ul>
+            <button>Плати маркираните</button>
+            <button>Премахни маркираните</button>
+        </section>
+    </main>
+    <footer id="footer">
+        <img src="images/shopping-cart.png" id="shopping-cart-button">
+        <h3>Най-якото кино евер. Всички права са запазени.</h3>
+        <img src="images/logout.png" id="logout-button">
+    </footer>
+</body>
+
+</html>

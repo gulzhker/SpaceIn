@@ -1,0 +1,116 @@
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.scene.control.Button;
+
+public class TitleScreen {
+	private Pane pane;
+
+	public TitleScreen(Pane pane) {
+		this.pane = pane;
+		pane.getChildren().clear();
+		initializeText();
+		initializeButtons();
+
+	}
+
+	// initialize all text objects
+	private void initializeText() {
+		Text title = new Text("SPACE INVADERS");
+		Text subtitle = new Text("By: Kerimbekova Gulzhan");
+
+		title.setFont(new Font(80));
+		subtitle.setFont(new Font(40));
+		title.setFill(Color.WHITE);
+		subtitle.setFill(Color.WHITE);
+
+		title.xProperty().bind(pane.widthProperty().divide(2).subtract(title.getLayoutBounds().getWidth()/2));
+		title.yProperty().bind(pane.heightProperty().divide(2).subtract(150));
+
+		subtitle.xProperty().bind(pane.widthProperty().divide(2).subtract(subtitle.getLayoutBounds().getWidth()/2));
+		subtitle.yProperty().bind(pane.heightProperty().divide(2).subtract(75));
+
+		pane.getChildren().add(title);
+		pane.getChildren().add(subtitle);
+	}
+
+	// initialize all buttons
+	private void initializeButtons() {
+
+		Button playButton = new Button("PRESS PLAY");
+		Button highScoresButton = new Button("YOUR HIGH SCORES");
+		Button instructionsButton = new Button("INSTRUCTION");
+		Button exitButton = new Button("EXIT");
+		playButton.setOnAction(new PlayHandler());
+		highScoresButton.setOnAction(new HighScoresHandler());
+		instructionsButton.setOnAction(new InstructionsHandler());
+		exitButton.setOnAction(new QuitHandler());
+
+		playButton.setScaleX(2);
+		playButton.setScaleY(2);
+		highScoresButton.setScaleX(2);
+		highScoresButton.setScaleY(2);
+		instructionsButton.setScaleX(2);
+		instructionsButton.setScaleY(2);
+		exitButton.setScaleX(2);
+		exitButton.setScaleY(2);
+
+		playButton.layoutXProperty().bind(pane.widthProperty().divide(2).subtract(playButton.widthProperty().divide(2)));
+		playButton.layoutYProperty().bind(pane.heightProperty().divide(2));
+
+		highScoresButton.layoutXProperty().bind(pane.widthProperty().divide(2).subtract(highScoresButton.widthProperty().divide(2)));
+		highScoresButton.layoutYProperty().bind(pane.heightProperty().divide(2).add(75));
+
+		instructionsButton.layoutXProperty().bind(pane.widthProperty().divide(2).subtract(instructionsButton.widthProperty().divide(2)));
+		instructionsButton.layoutYProperty().bind(pane.heightProperty().divide(2).add(150));
+
+		exitButton.layoutXProperty().bind(pane.widthProperty().divide(2).subtract(exitButton.widthProperty().divide(2)));
+		exitButton.layoutYProperty().bind(pane.heightProperty().divide(2).add(225));
+
+		pane.getChildren().add(playButton);
+		pane.getChildren().add(highScoresButton);
+		pane.getChildren().add(instructionsButton);
+		pane.getChildren().add(exitButton);
+	}
+
+	class PlayHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+
+		public void handle(ActionEvent e)
+		{
+			// starts the game if the play game button is pressed
+			new SpaceInvaders(pane);
+		}
+	}
+
+	class HighScoresHandler implements EventHandler<ActionEvent>
+	{
+		@Override
+		public void handle(ActionEvent e)
+		{
+			// creates an instance of a high score screen and the displays it if the button is pressed
+			HighScoresScreen highScoreScreen = new HighScoresScreen(pane);
+			highScoreScreen.start();
+		}
+	}
+
+	class InstructionsHandler implements EventHandler<ActionEvent> {
+		@Override
+		public void handle(ActionEvent e) {
+			// displays the instructions screen if the button is pressed
+			new InstructionsScreen(pane);
+		}
+	}
+
+	class QuitHandler implements EventHandler<ActionEvent> {
+		@Override
+		public void handle(ActionEvent e) {
+			// closes the window if the quit button is pressed
+			pane.getScene().getWindow().hide();
+		}
+	}
+}

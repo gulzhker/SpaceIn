@@ -1,0 +1,339 @@
+body,
+html {
+    height: 100%;
+}
+
+h1,
+h2 {
+    font-family: cursive;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    height: 10%;
+    background-color: black;
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header h1 {
+    color: white;
+    text-align: center;
+    align-self: center;
+}
+
+#header > div {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.main {
+    height: 80%;
+    background-color: #EDF0F5;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#login-form {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#login-form label {
+    color: white;
+    font-size: 1rem;
+}
+
+#login-form input {
+    height: 20px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+#login-form button {
+    height: 25px;
+    width: 100px;
+    margin-top: 20px;
+    background-color: grey;
+    border: 1px solid #2F477A;
+    border-radius: 5px;
+    color: white;
+}
+
+#login-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.index-sections {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#register-section {
+    align-items: flex-start;
+}
+
+.index-sections h1 {
+    height: 10%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#register-form {
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#register-form input {
+    width: 500px;
+    height: 30px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+#register-form div {
+    width: 100%;
+}
+
+#register-form div input {
+    width: 239px;
+}
+
+#register-form button {
+    width: 270px;
+    height: 40px;
+    border: 1px solid grey;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.index-sections img {
+    width: 90px;
+    height: 70px;
+}
+
+.index-sections span {
+    font-size: 2rem;
+}
+
+.index-sections ul {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+}
+
+.index-sections ul li {
+    align-self: baseline;
+    display: flex;
+}
+
+.index-sections ul li span {
+    align-self: center;
+}
+
+.index-sections ul li img {
+    margin-right: 20px;
+}
+
+#footer {
+    display: flex;
+    height: 10%;
+    justify-content: space-around;
+    background-color: grey;
+}
+
+#footer img {
+    width: 100px;
+    cursor: pointer;
+}
+
+#footer > h3 {
+    align-self: center;
+}
+
+#hole,
+#booking-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+}
+
+#booking-area > section {
+    height: 15%;
+}
+
+#screen {
+    margin-top: 10px;
+    height: 15px;
+    background-color: black;
+    width: 80%;
+    -webkit-transform: skew(-60deg);
+    -moz-transform: skew(-60deg);
+    -o-transform: skew(-60deg);
+}
+
+#seats {
+    margin-top: 10px;
+    height: 80%;
+    width: 90%;
+    overflow-y: scroll;
+}
+
+.seat {
+    width: 19%;
+    height: 19%;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    margin-left: 1%;
+    margin-top: 1%;
+    background-color: green;
+    font-size: 120%;
+}
+
+#book-main {
+    height: 80%;
+}
+
+#book-main > div {
+    width: 40%;
+    padding-top: 10px;
+}
+
+#projection-select {
+    width: 90%;
+    height: 40px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+#projection-select > select {
+    height: 200px;
+}
+
+#booking-btns {
+    display: flex;
+}
+
+#booking-area > section {
+    width: 100%;
+    text-align: center;
+}
+
+#booking-area h2 {
+    text-align: center;
+}
+
+#booking-btn {
+    width: 90%;
+    height: 40px;
+    margin-top: 10px;
+}
+
+#poster-section {
+    height: 70% !important;
+}
+
+#poster {
+    height: 90%;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.booked {
+    background-color: yellow;
+}
+
+#booking-list {
+    margin: 0;
+    height: 50%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+#payment-section {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.booking-items {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+}
+
+.booking-items > input {
+    height: 40px;
+    width: 40px;
+}
+
+#payment-section > button {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.no-style {
+    color: white;
+    text-decoration: none;
+}
+
+.search-divs {
+    display: flex;
+    width: 100%;
+}
+
+.search-divs > input {
+    width: 50%;
+    height: 40px;
+}
+
+.search-divs > button {
+    width: 50%;
+}
+
+.search-divs > select {
+    width: 100% !important;
+}
+
+#user-email {
+    padding-left: 10px;
+}
